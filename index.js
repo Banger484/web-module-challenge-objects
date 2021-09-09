@@ -84,7 +84,6 @@ Using the reviews array above:
 
 
 
-
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
@@ -92,8 +91,6 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
 */
 reviews[7].feedback = 'this place is chill with really cool people, great for getting work done on weekdays';
 console.log(reviews);
-
-
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -122,10 +119,11 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(array, index) {
+function getReviewByIndex(array, location) {
   /*Your code here*/
-  return `${this.name} gave the restaurant a ${this.rating} star review, and their feedback was: ${this.feedback}`
-}
+  return `${array[location].name} gave the restaurant a ${array[location].rating} star review, and their feedback was: ${array[location].feedback}`
+} 
+
 
 
   
@@ -142,10 +140,12 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
+function getLastReview(array) {
   /*Your code here*/
+  
+  return `${array[array.length -1].name} gave the restaurant a ${array[array.length -1].rating} star review, and their feedback was: ${array[array.length -1].feedback}`
 } 
-
+console.log(getLastReview(reviews));
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
